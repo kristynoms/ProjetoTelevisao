@@ -2,7 +2,7 @@ Create table grade(
 
 id integer primary key auto increment,
 nome varchar(100),
-fk_programa integer,
+fk_programa integer references programa(id),
 dataExibicao date
 );
 
@@ -26,9 +26,9 @@ id integer primary key auto increment,
 nome varchar(100),
 fk_genero_id integer,
 sinopse varchar(200),
-fk_classificacao_id integer,
-fk_emissora_id integer,
-fk_tipo_id integer
+fk_classificacao_id integer references classificacaoEtaria(id),
+fk_emissora_id integer references emissora(id),
+fk_tipo_id integer references tipo(id)
 
 );
 
