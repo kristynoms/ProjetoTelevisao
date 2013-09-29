@@ -1,0 +1,28 @@
+SELECT * FROM grade
+SELECT * FROM genero
+SELECT * FROM emissora
+SELECT * FROM classificacaoetaria
+SELECT * FROM programa
+
+INSERT INTO genero 
+VALUES (1,'Suspense') , 
+(2,'Drama') , 
+(3,'Comedia');
+
+INSERT INTO emissora VALUES
+(1,'Globo'),
+(2,'SBT'),
+(3, 'BAND');
+
+INSERT INTO classificacaoEtaria VALUES
+(1, '13+'),
+(2, '16+'),
+(3, '18')
+
+SELECT * FROM grade
+
+INSERT INTO grade ();
+
+
+
+SELECT * FROM grade JOIN programa p ON grade.`fk_programa` = p.id

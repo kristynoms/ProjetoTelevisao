@@ -10,40 +10,28 @@ $classifica = $_POST["classifica"];
 $emissora = $_POST["emissora"];
 $tipo = $_POST["tipo"];
 
+$dataExibicao = $_POST["dataExibicao"];
+$horaExibicao = $_POST["horaExibicao"];
 
 
 
+$dt = str_replace("/", "-", $dataExibicao);
 
 //Query que realiza a inserção dos dados no banco de dados na tabela indicada acima
-$query = "INSERT INTO programa (id,nome,fk_genero_id,sinopse,fk_classificacao_id,fk_emissora_id,fk_tipo_id )
+$query = "INSERT INTO programa (nome,fk_genero_id,sinopse,fk_classificacao_id,fk_emissora_id,fk_tipo_id )
  
-VALUES ('2','$nome','$genero','$sinopse','$classifica','$emissora','$tipo' )";
+VALUES ('$nome','$genero','$sinopse','$classifica','$emissora','$tipo' )";
 
+mysql_query($query);
+$id = mysql_insert_id();
 
-if(!mysql_query($query))
+// Another query
+$queryg = "INSERT INTO grade (fk_programa,dataExibicao,horaExibicao) VALUES (".$id.",'".$dt."','".$horaExibicao."')";
+mysql_query($queryg);
 
-{
-	echo "
-	
-	<script>
-	
-	alert('Erro ao Completar esta Operação!');history.go(-1);
-	
-	</script>
-	
-	";
+if(!mysql_error()) {
+    header( 'Location: index.php' ) ;
 }
-
-else 
-
-{
-	 echo "<script>";
-	 
-	 echo "alert('Sucesso ao Completar a Operação!'); document.location.href='index.html'";
-	 
-	 echo "</script>";
-}
-
 
 ?>
 
