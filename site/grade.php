@@ -3,7 +3,7 @@
 include './conexao.php';
 $emissora = $_REQUEST['programaca'];
 
-$sql = "SELECT programa.nome,cl.nome AS classificacao,g.nome AS genero,emissora.`nome` AS emissora,t.nome AS tipo,dataExibicao,horaExibicao FROM grade 
+$sql = "SELECT programa.nome,cl.nome AS classificacao,g.nome AS genero,emissora.`nome` AS emissora,t.nome AS tipo,dataExibicao,horaExibicao,horaTermino FROM grade 
 JOIN programa ON grade.fk_programa = programa.id LEFT JOIN
 classificacaoetaria cl ON cl.id = programa.`fk_classificacao_id` LEFT JOIN
 genero g ON g.id = programa.`fk_genero_id` LEFT JOIN tipo t ON t.id = programa.fk_tipo_id
@@ -27,9 +27,9 @@ while($row = mysql_fetch_array($result)) {
 </head>
     <body>
         
-        <h2>Lista de grade de programção</h2>
+        <h2>Lista de grade de programação</h2>
         
-        <table border="1" border-collapse="collapse">
+        <table width="692" border="1" border-collapse="collapse">
             <thead>
                 <tr>
                 <th>Programa</th>
@@ -39,7 +39,9 @@ while($row = mysql_fetch_array($result)) {
                 <th>Tipo</th>
                 <th>Data Exibição</th>
                 <th>Hora Exibição</th>
-            </tr>
+                <th>Hora Término</th>
+                <th>Sinopse</th>
+              </tr>
             </thead>
             <tbody>
                 <?php foreach ($r as $r) { ?>
@@ -51,6 +53,8 @@ while($row = mysql_fetch_array($result)) {
                     <td><?=$r['tipo']?></td>
                     <td><?=$r['dataExibicao']?></td>
                     <td><?=$r['horaExibicao']?></td>
+                    <td><?=$r['horaExibicao2']?></td>
+                    <td><?=$r['sinopse']?></td>
                 </tr>
                 <?php } ?>
             </tbody>

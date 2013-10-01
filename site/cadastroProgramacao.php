@@ -53,7 +53,7 @@ $emissoras = mysql_query($sql);
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-<title>Untitled Document</title>
+<title>Cadastro de Programas</title>
 </head>
 
 <body>
@@ -66,7 +66,7 @@ $emissoras = mysql_query($sql);
     <td width="221"><input type="text" name="nome" id="nome" /></td>
   </tr>
   <tr>
-    <td>Genero:</td>
+    <td>Gênero:</td>
     <td><label for="genero"></label>
       <select name="genero" id="genero">
           <?php foreach($g as $g) { ?>
@@ -125,12 +125,16 @@ $emissoras = mysql_query($sql);
       <input type="text" name="horaExibicao" id="horaExibicao"/>
     </td>
   </tr>
+   <tr>
+     <td>Hora de Término</td>
+     <td><input type="text" name="horaExibicao2" id="horaExibicao2"/></td>
+   </tr>
     
 </table>
 
 <p>
-  <input type="submit" name="subimit" id="submit" value="Submit"  />
-  <input type="reset" name="Cancel" id="Cancel" value="Cancel" />
+  <input type="submit" name="subimit" id="submit" value="Enviar"  />
+  <input type="reset" name="Cancel" id="Cancel" value="Cancelar" />
 </p>
 </form>
     
