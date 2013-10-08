@@ -3,11 +3,13 @@
 include './conexao.php';
 $emissora = $_REQUEST['programaca'];
 
-$sql = "SELECT programa.nome,cl.nome AS classificacao,g.nome AS genero,emissora.`nome` AS emissora,t.nome AS tipo,dataExibicao,horaExibicao,horaTermino FROM grade 
+$sql = "SELECT programa.nome,cl.nome AS classificacao,g.nome AS genero,emissora.`nome`
+ AS emissora,t.nome,programa.sinopse ,dataExibicao,horaExibicao,horaTermino FROM grade 
 JOIN programa ON grade.fk_programa = programa.id LEFT JOIN
 classificacaoetaria cl ON cl.id = programa.`fk_classificacao_id` LEFT JOIN
 genero g ON g.id = programa.`fk_genero_id` LEFT JOIN tipo t ON t.id = programa.fk_tipo_id
-LEFT JOIN emissora ON emissora.`id` = programa.`fk_emissora_id` WHERE emissora.id = ". $emissora ;
+LEFT JOIN emissora ON emissora.`id` = programa.`fk_emissora_id` WHERE emissora.id =". $emissora ;
+
 
 $result = mysql_query($sql);
 $r = array();
@@ -184,11 +186,10 @@ ul.nav a { zoom: 1; }  /* a propriedade do zoom fornece ao IE o acionador de has
                 <th>Classificação</th>
                 <th>Genero</th>
                 <th>Emissora</th>
-                <th>Tipo</th>
+                <th>Sinopse</th>
                 <th>Data Exibição</th>
                 <th>Hora Exibição</th>
                 <th>Hora Término</th>
-                <th>Sinopse</th>
               </tr>
             </thead>
             <tbody>
@@ -198,11 +199,10 @@ ul.nav a { zoom: 1; }  /* a propriedade do zoom fornece ao IE o acionador de has
                     <td><?=$r['classificacao']?></td>
                     <td><?=$r['genero']?></td>
                     <td><?=$r['emissora']?></td>
-                    <td><?=$r['tipo']?></td>
+                    <td><?=$r['sinopse']?></td>
                     <td><?=$r['dataExibicao']?></td>
                     <td><?=$r['horaExibicao']?></td>
-                    <td><?=$r['horaExibicao2']?></td>
-                    <td><?=$r['sinopse']?></td>
+                    <td><?=$r['horaTermino']?></td>
                 </tr>
                 <?php } ?>
             </tbody>
