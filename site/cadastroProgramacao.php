@@ -3,8 +3,8 @@
 <link href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" rel="stylesheet" />
   <script>
   $(function() {
-    $( "#dataExibicao" ).datepicker({
-        dateFormat:'yy-mm-dd'
+    $( "#dataExibicao,#dataTermino" ).datepicker({
+        dateFormat:'dd-mm-yy'
     });
   });
   </script>
@@ -273,7 +273,7 @@ ul.nav a { zoom: 1; }  /* a propriedade do zoom fornece ao IE o acionador de has
   </tr>
    <tr>
      <td>Hora de Término</td>
-     <td><input type="text" name="horaExibicao2" id="horaExibicao2"/></td>
+     <td><input type="text" name="horaExibicao2" id="horaTermino"/></td>
    </tr>
     
 </table>
