@@ -1,10 +1,15 @@
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+
+<?php 
+	session_start();
+?>
+
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Documento sem título</title>
 <style type="text/css">
-<!--
+
 body {
 	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
 	background-color: #4E5869;
@@ -126,7 +131,7 @@ ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* isso altera o fundo e a cor
 	font-size: 1px;
 	line-height: 0px;
 }
--->
+
 </style><!--[if lte IE 7]>
 <style>
 .content { margin-right: -1px; } /* essa margem negativa de 1px pode ser colocada em qualquer uma das colunas nesse layout com o mesmo efeito corretivo. */
@@ -154,12 +159,40 @@ ul.nav a { zoom: 1; }  /* a propriedade do zoom fornece ao IE o acionador de has
     <p>por </p>
     <p>enquanto</p>
     <!-- end .sidebar1 --></div>
-  <div class="content">
+  
+  
+  
+<?php 
+	if(!isset($_SESSION['user'])) {
+?>	
+	<form method="post" action="login.php">
+	<label for="login">Login</label>
+	<input type="text" name="login" />
+	<label for="senha">Senha</label>
+	<input type="text" name="senha" />
+	<input type="submit" value="Logar-se" />
+	</form>
+<?php	
+	if(isset($_SESSION['error'])) {
+			echo "usuário ou senha inválidos";
+	}
+	
+	} else {
+?>
+
+  
+	<div class="content"><h4><?php if(isset($_SESSION['user'])) { echo "Bem vindo ". $_SESSION['user']; } ?></h4>
     <h1>&nbsp;</h1>
     <h1>Sobre</h1>
     <p>Sistema criado para disponibilizar programação.</p>
     <!-- end .content --></div>
+	
+<?php } ?>
+	
   <div class="footer">
+	<?php  if(isset($_SESSION['user'])) { ?> 
+		<a href="logout.php">Logout</a>
+	<?php } ?>
     <p align="center"> TelevisionRecords @2013</p>
     <!-- end .footer --></div>
   <!-- end .container --></div>
