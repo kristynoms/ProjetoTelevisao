@@ -6,6 +6,9 @@
 	session_start();
 ?>
 
+
+
+
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Documento sem título</title>
 <style type="text/css">
@@ -140,38 +143,16 @@ ul.nav a { zoom: 1; }  /* a propriedade do zoom fornece ao IE o acionador de has
 <![endif]--></head>
 
 <body>
-
-<div class="container">
-  <div class="header" align="center">
-    <p>TelevisionRecords</p>
-    <p>&nbsp;</p>
-  </div>
-  <div class="sidebar1">
-    <ul class="nav">
-      <li><a href="prog.php">Selecionar Programação</a></li>
-      <li><a href="cadastroProgramacao.php">Cadastrar</a></li>
-      <li></li>
-      <li></li>
-    </ul>
-    <p> Menu</p>
-    <p>sem </p>
-    <p>utilidade</p>
-    <p>por </p>
-    <p>enquanto</p>
-    <!-- end .sidebar1 --></div>
-  
-  
-  
 <?php 
 	if(!isset($_SESSION['user'])) {
 ?>	
-	<form method="post" action="login.php">
+<div align="center" style="margin-top:200px;"><form method="post" action="login.php">
 	<label for="login">Login</label>
 	<input type="text" name="login" />
 	<label for="senha">Senha</label>
 	<input type="text" name="senha" />
 	<input type="submit" value="Logar-se" />
-	</form>
+</form></div>
 <?php	
 	if(isset($_SESSION['error'])) {
 			echo "usuário ou senha inválidos";
@@ -180,21 +161,7 @@ ul.nav a { zoom: 1; }  /* a propriedade do zoom fornece ao IE o acionador de has
 	} else {
 ?>
 
-  
-	<div class="content"><h4><?php if(isset($_SESSION['user'])) { echo "Bem vindo ". $_SESSION['user']; } ?></h4>
-    <h1>&nbsp;</h1>
-    <h1>Sobre</h1>
-    <p>Sistema criado para disponibilizar programação.</p>
-    <!-- end .content --></div>
-	
+<?php if(isset($_SESSION['user'])) { echo "Bem vindo ". $_SESSION['user']; } ?>
 <?php } ?>
-	
-  <div class="footer">
-	<?php  if(isset($_SESSION['user'])) { ?> 
-		<a href="logout.php">Logout</a>
-	<?php } ?>
-    <p align="center"> TelevisionRecords @2013</p>
-    <!-- end .footer --></div>
-  <!-- end .container --></div>
 </body>
 </html>
