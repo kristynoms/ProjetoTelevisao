@@ -191,17 +191,7 @@ ul.nav a { zoom: 1; }  /* a propriedade do zoom fornece ao IE o acionador de has
     <p>&nbsp;</p>
   </div>
   <div class="sidebar1">
-    <ul class="nav">
-      <li><a href="prog.php">Selecionar Programação</a></li>
-      <li><a href="cadastroProgramacao.php">Cadastrar</a></li>
-      <li></li>
-      <li></li>
-    </ul>
-    <p> Menu</p>
-    <p>sem </p>
-    <p>utilidade</p>
-    <p>por </p>
-    <p>enquanto</p>
+		<?php include_once('sidebar.php'); ?>
     <!-- end .sidebar1 --></div>
   <div class="content">
     <form id="frm" action="cadastro.php" method="post">

@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 include './conexao.php';
 $emissora = $_REQUEST['programaca'];
@@ -21,10 +21,11 @@ while($row = mysql_fetch_array($result)) {
 
 ?>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="pt-br">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 <title>TelevisionRecords</title>
 <style type="text/css">
 <!--
@@ -165,17 +166,7 @@ ul.nav a { zoom: 1; }  /* a propriedade do zoom fornece ao IE o acionador de has
     <p>&nbsp;</p>
   </div>
   <div class="sidebar1">
-    <ul class="nav">
-      <li><a href="prog.php">Selecionar Programação</a></li>
-      <li><a href="cadastroProgramacao.php">Cadastrar</a></li>
-      <li></li>
-      <li></li>
-    </ul>
-    <p> Menu</p>
-    <p>sem </p>
-    <p>utilidade</p>
-    <p>por </p>
-    <p>enquanto</p>
+		<?php include_once('sidebar.php'); ?>
     <!-- end .sidebar1 --></div>
   <div class="content">
      <h2>Lista de grade de programação</h2>

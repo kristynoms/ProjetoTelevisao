@@ -1,4 +1,4 @@
- <?php
+<?php
 
 if (!$conexao = mysql_connect('localhost','root','')){
 	
@@ -6,7 +6,7 @@ if (!$conexao = mysql_connect('localhost','root','')){
 	
 	exit();
 }
-	
+	 
 if(!mysql_select_db('projetotr',$conexao)){
 	echo "Erro ao Selecionar a Base de Dados";
 	exit();
