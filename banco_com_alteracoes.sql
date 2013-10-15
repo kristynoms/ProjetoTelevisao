@@ -56,7 +56,7 @@ CREATE TABLE `genero` (
 
 /*Data for the table `genero` */
 
-insert  into `genero`(`id`,`nome`) values (1,'Suspense'),(2,'Drama'),(3,'Comedia');
+insert  into `genero`(`id`,`nome`) values (1,'Suspense'),(2,'Drama'),(3,'Comédia');
 
 /*Table structure for table `grade` */
 
@@ -105,7 +105,7 @@ CREATE TABLE `tipo` (
 
 /*Data for the table `tipo` */
 
-insert  into `tipo`(`id`,`nome`) values (1,'Novela'),(2,'Serie'),(3,'Informátivo'),(4,'Filme');
+insert  into `tipo`(`id`,`nome`) values (1,'Novela'),(2,'Série'),(3,'Informativo'),(4,'Filme');
 
 /*Table structure for table `usuario` */
 
