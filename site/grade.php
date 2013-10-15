@@ -197,13 +197,19 @@ ul.nav a { zoom: 1; }  /* a propriedade do zoom fornece ao IE o acionador de has
             <tbody>
                 <?php foreach ($r as $r) { ?>
                 <tr>
+					
+					<?php 
+					
+					$data = date("d/m/Y", strtotime($r['dataExibicao']));
+					?>
+				
                     <td><?=$r['nome']?></td>
                     <td><?=$r['classificacao']?></td>
                     <td><?=$r['genero']?></td>
                     <td><?=$r['emissora']?></td>
                     <td><?=$r['sinopse']?></td>
                      <td><?=$r['tipo']?></td>
-                    <td><?=$r['dataExibicao']?></td>
+                    <td><?=$data?></td>
                     <td><?=$r['horaExibicao']?></td>
                     <td><?=$r['horaTermino']?></td>
                 </tr>
