@@ -14,9 +14,10 @@ $dataExibicao = $_POST["dataExibicao"];
 $horaExibicao = $_POST["horaExibicao"];
 $horaExibicao2 = $_POST["horaExibicao2"];
 
+$date = str_replace('/', '-', $dataExibicao);
+$date = date('Y-m-d', strtotime($date));
 
 
-$dt = str_replace("/", "-", $dataExibicao);
 
 //Query que realiza a inserção dos dados no banco de dados na tabela indicada acima
 $query = "INSERT INTO programa (nome,fk_genero_id,sinopse,fk_classificacao_id,fk_emissora_id,fk_tipo_id )
@@ -27,7 +28,7 @@ mysql_query($query);
 $id = mysql_insert_id();
 
 // Another query
-$queryg = "INSERT INTO grade (fk_programa,dataExibicao,horaExibicao,horaTermino) VALUES (".$id.",'".$dt."','".$horaExibicao."','".$horaExibicao2."')";
+$queryg = "INSERT INTO grade (fk_programa,dataExibicao,horaExibicao,horaTermino) VALUES (".$id.",'".$date."','".$horaExibicao."','".$horaExibicao2."')";
 mysql_query($queryg);
 
 if(!mysql_error()) {
