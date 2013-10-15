@@ -4,11 +4,12 @@ include './conexao.php';
 $emissora = $_REQUEST['programaca'];
 
 $sql = "SELECT programa.nome,cl.nome AS classificacao,g.nome AS genero,emissora.`nome`
- AS emissora,t.nome,programa.sinopse ,dataExibicao,horaExibicao,horaTermino FROM grade 
-JOIN programa ON grade.fk_programa = programa.id LEFT JOIN
-classificacaoetaria cl ON cl.id = programa.`fk_classificacao_id` LEFT JOIN
+ AS emissora,t.nome,programa.sinopse ,tipo.nome AS tipo,dataExibicao,horaExibicao,horaTermino FROM grade 
+JOIN programa ON grade.fk_programa = programa.id  JOIN
+classificacaoetaria cl ON cl.id = programa.`fk_classificacao_id`  JOIN
+tipo ON tipo.id = programa.fk_tipo_id  JOIN
 genero g ON g.id = programa.`fk_genero_id` LEFT JOIN tipo t ON t.id = programa.fk_tipo_id
-LEFT JOIN emissora ON emissora.`id` = programa.`fk_emissora_id` WHERE emissora.id =". $emissora ;
+ JOIN emissora ON emissora.`id` = programa.`fk_emissora_id` WHERE emissora.id =". $emissora ;
 
 
 $result = mysql_query($sql);
@@ -24,7 +25,7 @@ while($row = mysql_fetch_array($result)) {
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Documento sem título</title>
+<title>TelevisionRecords</title>
 <style type="text/css">
 <!--
 body {
@@ -187,6 +188,7 @@ ul.nav a { zoom: 1; }  /* a propriedade do zoom fornece ao IE o acionador de has
                 <th>Genero</th>
                 <th>Emissora</th>
                 <th>Sinopse</th>
+                <th>Tipo</th>
                 <th>Data Exibição</th>
                 <th>Hora Exibição</th>
                 <th>Hora Término</th>
@@ -200,6 +202,7 @@ ul.nav a { zoom: 1; }  /* a propriedade do zoom fornece ao IE o acionador de has
                     <td><?=$r['genero']?></td>
                     <td><?=$r['emissora']?></td>
                     <td><?=$r['sinopse']?></td>
+                     <td><?=$r['tipo']?></td>
                     <td><?=$r['dataExibicao']?></td>
                     <td><?=$r['horaExibicao']?></td>
                     <td><?=$r['horaTermino']?></td>

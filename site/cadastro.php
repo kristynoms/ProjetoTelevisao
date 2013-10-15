@@ -31,7 +31,7 @@ $queryg = "INSERT INTO grade (fk_programa,dataExibicao,horaExibicao,horaTermino)
 mysql_query($queryg);
 
 if(!mysql_error()) {
-    header( 'Location: index.php' ) ;
+    header( 'Location: home.php' ) ;
 }
 
 ?>
