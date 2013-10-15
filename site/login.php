@@ -1,9 +1,11 @@
 <?php
+include('conexao.php');
 	session_start();
 	$user = $_POST['login'];
 	$senha = $_POST['senha'];
-	
-	if($user != "" && $senha == "123") {
+	$logar = mysql_query("SELECT * FROM usuario WHERE login='$user' AND senha='$senha'") ;
+	 $count = mysql_num_rows($logar);
+	if($count >= 1) {
 		$_SESSION['user'] = $user;
 		header('Location: home.php');
 	} else {
