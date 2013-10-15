@@ -1,4 +1,4 @@
-<?php
+ <?php
 
 if (!$conexao = mysql_connect('localhost','root','')){
 	
