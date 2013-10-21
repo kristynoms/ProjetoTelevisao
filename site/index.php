@@ -10,7 +10,7 @@
 
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Documento sem título</title>
+<title>Login</title>
 <style type="text/css">
 
 body {
@@ -21,10 +21,7 @@ body {
 	color: #000;
 }
 
-/* ~~ Seletores de elementos/tag ~~ */
-ul, ol, dl { /* Devido a variações entre navegadores, é recomendado zerar o padding e a margem nas listas. É possível especificar as quantidades aqui ou nos itens da lista (LI, DT, DD) que eles contêm. Lembre-se: o que você fizer aqui ficará em cascata para a lista de navegação a não ser que você escreva outro seletor mais específico. */
-	padding: 0;
-	margin: 0;
+
 }
 h1, h2, h3, h4, h5, h6, p {
 	margin-top: 0;	 /* ao remover a margem superior, as margens podem escapar das suas containing div. A margem inferior restante vai mantê-la afastada de qualquer elemento que se segue. */
@@ -35,11 +32,6 @@ a img { /* esse seletor remove a borda azul padrão exibida em alguns navegadore
 	border: none;
 }
 
-/* ~~ A estilização dos links do seu site deve permanecer nesta ordem – incluindo o grupo de seletores que criam o efeito hover. ~~ */
-a:link {
-	color:#414958;
-	text-decoration: underline; /* a não ser que você estilize seus links para que pareçam extremamente únicos, é melhor utilizar links sublinhados para uma identificação visual mais rápida. */
-}
 a:visited {
 	color: #4E5869;
 	text-decoration: underline;
@@ -135,12 +127,8 @@ ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* isso altera o fundo e a cor
 	line-height: 0px;
 }
 
-</style><!--[if lte IE 7]>
-<style>
-.content { margin-right: -1px; } /* essa margem negativa de 1px pode ser colocada em qualquer uma das colunas nesse layout com o mesmo efeito corretivo. */
-ul.nav a { zoom: 1; }  /* a propriedade do zoom fornece ao IE o acionador de hasLayout necessário para corrigir o espaço extra em branco entre os links */
 </style>
-<![endif]--></head>
+</head>
 
 <body>
 <?php 
