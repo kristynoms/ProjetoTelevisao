@@ -120,6 +120,9 @@ CREATE TABLE `usuario` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+
+insert into usuario(nome,email,login,senha) values('eee','eee','eee','eee');
+
 /*Data for the table `usuario` */
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
