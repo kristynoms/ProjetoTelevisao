@@ -3,7 +3,9 @@
 <link href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" rel="stylesheet" />
   <script>
   
-  jQuery(function($){
+/* Brazilian initialisation for the jQuery UI date picker plugin. */
+/* Written by Leonildo Costa Silva (leocsilva@gmail.com). */
+jQuery(function($){
         $.datepicker.regional['pt-BR'] = {
                 closeText: 'Fechar',
                 prevText: '&#x3c;Anterior',
@@ -23,14 +25,11 @@
                 showMonthAfterYear: false,
                 yearSuffix: ''};
         $.datepicker.setDefaults($.datepicker.regional['pt-BR']);
-
+});
 	
-  
-  
-
-    $( "#dataExibicao,#dataTermino" ).datepicker({
-        dateFormat:'dd-mm-yy'
-    });
+	$("#dataExibicao").datepicker();
+	
+	
   });
   </script>
 <?php 
@@ -73,13 +72,12 @@ $emissoras = mysql_query($sql);
 
 <DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<html lang="pt-br">
 <head>
-<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>TelevisionRecords</title>
 <style type="text/css">
 <!--
-body {
+body {wadawd
 	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
 	background-color: #4E5869;
 	margin: 0;
@@ -216,7 +214,17 @@ ul.nav a { zoom: 1; }  /* a propriedade do zoom fornece ao IE o acionador de has
     <p>&nbsp;</p>
   </div>
   <div class="sidebar1">
-		<?php include_once('sidebar.php'); ?>
+    <ul class="nav">
+      <li><a href="prog.php">Selecionar Programação</a></li>
+      <li><a href="cadastroProgramacao.php">Cadastrar</a></li>
+      <li></li>
+      <li></li>
+    </ul>
+    <p> Menu</p>
+    <p>sem </p>
+    <p>utilidade</p>
+    <p>por </p>
+    <p>enquanto</p>
     <!-- end .sidebar1 --></div>
   <div class="content">
     <form id="frm" action="cadastro.php" method="post">
