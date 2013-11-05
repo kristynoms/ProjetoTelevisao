@@ -149,6 +149,18 @@ ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* isso altera o fundo e a cor
 	font-size: 1px;
 	line-height: 0px;
 }
+
+/*css global tabela*/
+        .full_table_list{width: 200px;border-collapse: collapse;}
+         
+        /*colocando bordas nas linhas*/
+        .full_table_list tr{border:1px black solid;}
+         
+        /*Definido cor das linhas pares*/
+        .full_table_list tr:nth-child(even) {background: #FFF}
+         
+        /*Definindo cor das Linhas impáres*/
+        .full_table_list tr:nth-child(odd) {background: #EEE}     
 -->
 </style><!--[if lte IE 7]>
 <style>
@@ -175,7 +187,7 @@ ul.nav a { zoom: 1; }  /* a propriedade do zoom fornece ao IE o acionador de has
   <div class="content">
      <h2>Lista de grade de programação</h2>
         
-        <table width="692" border="1" border-collapse="collapse">
+        <table width="692" border="1" class="full_table_list" border-collapse="collapse">
             <thead>
                 <tr>
                 <th>Programa</th>
@@ -191,7 +203,7 @@ ul.nav a { zoom: 1; }  /* a propriedade do zoom fornece ao IE o acionador de has
             </thead>
             <tbody>
                 <?php foreach ($r as $r) { ?>
-                <tr>
+                <tr style=" ">
 					
 					<?php 
 					
@@ -202,7 +214,7 @@ ul.nav a { zoom: 1; }  /* a propriedade do zoom fornece ao IE o acionador de has
                     <td><?=$r['classificacao']?></td>
                     <td><?=$r['genero']?></td>
                     <td><?=$r['emissora']?></td>
-                    <td><?=$r['sinopse']?></td>
+                    <td><textarea name="a" cols="20" rows="3"><?=$r['sinopse']?></textarea></td>
                      <td><?=$r['tipo']?></td>
                     <td><?=$data?></td>
                     <td><?=$r['horaExibicao']?></td>

@@ -25,12 +25,10 @@ jQuery(function($){
                 showMonthAfterYear: false,
                 yearSuffix: ''};
         $.datepicker.setDefaults($.datepicker.regional['pt-BR']);
+		$("#dataExibicao").datepicker();
 });
 	
-	$("#dataExibicao").datepicker();
 	
-	
-  });
   </script>
 <?php 
     include 'conexao.php';
