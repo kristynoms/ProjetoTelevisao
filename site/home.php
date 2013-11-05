@@ -10,7 +10,7 @@
 <title>TelevisionRecords</title>
 <style type="text/css">
 <!--
-body {wadawd
+body {
 	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
 	background-color: #4E5869;
 	margin: 0;
@@ -72,8 +72,8 @@ a:hover, a:active, a:focus { /* esse grupo de seletores dará ao navegador que e
 */
 .sidebar1 {
 	float: left;
-	width: 20%;
-	background-color: #93A5C4;
+	width: 50%;
+	
 	padding-bottom: 10px;
 }
 .content {
@@ -81,6 +81,7 @@ a:hover, a:active, a:focus { /* esse grupo de seletores dará ao navegador que e
 	width: 80%;
 	float: left;
 	background-color:#6F7D94;
+	color:#FFF;
 }
 
 /* ~~ Este seletor agrupado oferece as listas dentro do espaço da área de conteúdo.~~ */
@@ -134,10 +135,6 @@ ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* isso altera o fundo e a cor
 }
 -->
 </style><!--[if lte IE 7]>
-<style>
-.content { margin-right: -1px; } /* essa margem negativa de 1px pode ser colocada em qualquer uma das colunas nesse layout com o mesmo efeito corretivo. */
-ul.nav a { zoom: 1; }  /* a propriedade do zoom fornece ao IE o acionador de hasLayout necessário para corrigir o espaço extra em branco entre os links */
-</style>
 <![endif]--></head>
 
 <body>
@@ -151,13 +148,11 @@ ul.nav a { zoom: 1; }  /* a propriedade do zoom fornece ao IE o acionador de has
     <ul class="nav">
       <li><a href="prog.php">Selecionar Programação</a></li>
       <li><a href="cadastroProgramacao.php">Cadastrar</a></li>
-      <li></li>
-      <li></li>
+      
     </ul>
-    <p>&nbsp;</p>
+    
     <!-- end .sidebar1 --></div>
   <div class="content"><h4>&nbsp;</h4>
-    <h1>&nbsp;</h1>
     <h1>Sobre</h1>
     <p>Sistema criado para disponibilizar programação.</p>
     <!-- end .content --></div>
