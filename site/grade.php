@@ -3,7 +3,7 @@
 include './conexao.php';
 $emissora = $_REQUEST['programaca'];
 
-$sql = "SELECT programa.nome,cl.nome AS classificacao,g.nome AS genero,emissora.`nome`
+$sql = "SELECT programa.nome AS programa ,cl.nome AS classificacao,g.nome AS genero,emissora.`nome`
  AS emissora,t.nome,programa.sinopse ,tipo.nome AS tipo,dataExibicao,horaExibicao,horaTermino FROM grade 
 JOIN programa ON grade.fk_programa = programa.id  JOIN
 classificacaoetaria cl ON cl.id = programa.`fk_classificacao_id`  JOIN
@@ -28,7 +28,7 @@ while($row = mysql_fetch_array($result)) {
 <title>TelevisionRecords</title>
 <style type="text/css">
 <!--
-body {
+body {wadawd
 	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
 	background-color: #4E5869;
 	margin: 0;
@@ -65,10 +65,10 @@ a:hover, a:active, a:focus { /* esse grupo de seletores dará ao navegador que e
 
 /* ~ esse contêiner envolve todos os outros divs dando a eles uma largura com base em porcentagem ~~ */
 .container {
-	width: 90%;
+	width: 80%;
 	max-width: 1260px;/* uma largura máxima pode ser desejável para evitar que esse layout fique muito largo num monitor grande. Isso torna o comprimento da linha mais legível. O IE6 não concorda com essa declaração. */
 	min-width: 780px;/* uma largura mínima pode ser desejável para evitar que esse layout fique muito estreito. Isso torna o comprimento da linha mais legível nas colunas laterais. O IE6 não concorda com essa declaração. */
-	background-color: #FFF;
+	background-color: #6F7D94;
 	margin: 0 auto; /* o valor automático nos lados, combinado com a largura, centraliza o layout. Não é necessário definir a largura do contêiner para 100%. */
 }
 
@@ -90,14 +90,16 @@ a:hover, a:active, a:focus { /* esse grupo de seletores dará ao navegador que e
 */
 .sidebar1 {
 	float: left;
-	width: 20%;
-	background-color: #93A5C4;
+	width: 50%;
+	
 	padding-bottom: 10px;
 }
 .content {
 	padding: 10px 0;
-	width: 70%;
+	width: 80%;
 	float: left;
+	background-color:#6F7D94;
+	color:#FFF;
 }
 
 /* ~~ Este seletor agrupado oferece as listas dentro do espaço da área de conteúdo.~~ */
@@ -149,18 +151,6 @@ ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* isso altera o fundo e a cor
 	font-size: 1px;
 	line-height: 0px;
 }
-
-/*css global tabela*/
-        .full_table_list{width: 200px;border-collapse: collapse;}
-         
-        /*colocando bordas nas linhas*/
-        .full_table_list tr{border:1px black solid;}
-         
-        /*Definido cor das linhas pares*/
-        .full_table_list tr:nth-child(even) {background: #FFF}
-         
-        /*Definindo cor das Linhas impáres*/
-        .full_table_list tr:nth-child(odd) {background: #EEE}     
 -->
 </style><!--[if lte IE 7]>
 <style>
@@ -177,11 +167,10 @@ ul.nav a { zoom: 1; }  /* a propriedade do zoom fornece ao IE o acionador de has
     <p>&nbsp;</p>
   </div>
   <div class="sidebar1">
-    <ul class="nav">
+    <ul class="nav" >
       <li><a href="prog.php">Selecionar Programação</a></li>
-      <li><a href="cadastroProgramacao.php">Cadastrar</a></li>
-      <li></li>
-      <li></li>
+      <li><a href="cadastroProgramacao.php">Cadastrar</a></li>      
+   
     </ul>
     <!-- end .sidebar1 --></div>
   <div class="content">
@@ -190,9 +179,10 @@ ul.nav a { zoom: 1; }  /* a propriedade do zoom fornece ao IE o acionador de has
         <table width="692" border="1" class="full_table_list" border-collapse="collapse">
             <thead>
                 <tr>
+                
                 <th>Programa</th>
                 <th>Classificação</th>
-                <th>Genero</th>
+                <th>Gênero</th>
                 <th>Emissora</th>
                 <th>Sinopse</th>
                 <th>Tipo</th>
@@ -210,7 +200,7 @@ ul.nav a { zoom: 1; }  /* a propriedade do zoom fornece ao IE o acionador de has
 					$data = date("d/m/Y", strtotime($r['dataExibicao']));
 					?>
 				
-                    <td><?=$r['nome']?></td>
+                    <td><?=$r['programa']?></td>
                     <td><?=$r['classificacao']?></td>
                     <td><?=$r['genero']?></td>
                     <td><?=$r['emissora']?></td>

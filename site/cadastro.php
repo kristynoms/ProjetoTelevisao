@@ -13,6 +13,8 @@ $tipo = $_POST["tipo"];
 $dataExibicao = $_POST["dataExibicao"];
 $horaExibicao = $_POST["horaExibicao"];
 $horaExibicao2 = $_POST["horaExibicao2"];
+$horaMinutos = $_POST['horasminutos'];
+$horaMinutos2 = $_POST['horasminutos2'];
 
 $date = str_replace('/', '-', $dataExibicao);
 $date = date('Y-m-d', strtotime($date));
@@ -28,7 +30,7 @@ mysql_query($query);
 $id = mysql_insert_id();
 
 // Another query
-$queryg = "INSERT INTO grade (fk_programa,dataExibicao,horaExibicao,horaTermino) VALUES (".$id.",'".$date."','".$horaExibicao."','".$horaExibicao2."')";
+$queryg = "INSERT INTO grade (fk_programa,dataExibicao,horaExibicao,horaTermino) VALUES (".$id.",'".$date."','".$horaExibicao.":".$horaMinutos."','".$horaExibicao2.":".$horaMinutos2."')";
 mysql_query($queryg);
 
 if(!mysql_error()) {

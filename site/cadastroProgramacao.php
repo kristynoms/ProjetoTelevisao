@@ -75,7 +75,7 @@ $emissoras = mysql_query($sql);
 <title>TelevisionRecords</title>
 <style type="text/css">
 <!--
-body {wadawd
+body {
 	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
 	background-color: #4E5869;
 	margin: 0;
@@ -115,7 +115,7 @@ a:hover, a:active, a:focus { /* esse grupo de seletores dará ao navegador que e
 	width: 80%;
 	max-width: 1260px;/* uma largura máxima pode ser desejável para evitar que esse layout fique muito largo num monitor grande. Isso torna o comprimento da linha mais legível. O IE6 não concorda com essa declaração. */
 	min-width: 780px;/* uma largura mínima pode ser desejável para evitar que esse layout fique muito estreito. Isso torna o comprimento da linha mais legível nas colunas laterais. O IE6 não concorda com essa declaração. */
-	background-color: #FFF;
+	background-color: #6F7D94;
 	margin: 0 auto; /* o valor automático nos lados, combinado com a largura, centraliza o layout. Não é necessário definir a largura do contêiner para 100%. */
 }
 
@@ -137,14 +137,16 @@ a:hover, a:active, a:focus { /* esse grupo de seletores dará ao navegador que e
 */
 .sidebar1 {
 	float: left;
-	width: 20%;
-	background-color: #93A5C4;
+	width: 50%;
+	
 	padding-bottom: 10px;
 }
 .content {
 	padding: 10px 0;
 	width: 80%;
 	float: left;
+	background-color:#6F7D94;
+	color:#FFF;
 }
 
 /* ~~ Este seletor agrupado oferece as listas dentro do espaço da área de conteúdo.~~ */
@@ -215,8 +217,7 @@ ul.nav a { zoom: 1; }  /* a propriedade do zoom fornece ao IE o acionador de has
     <ul class="nav">
       <li><a href="prog.php">Selecionar Programação</a></li>
       <li><a href="cadastroProgramacao.php">Cadastrar</a></li>
-      <li></li>
-      <li></li>
+     
     </ul>
     <!-- end .sidebar1 --></div>
   <div class="content">
@@ -225,12 +226,12 @@ ul.nav a { zoom: 1; }  /* a propriedade do zoom fornece ao IE o acionador de has
 <p>&nbsp;</p>
 <table width="314" border="0" >
   <tr>
-    <td width="83">Nome:</td>
-    <td width="221"><input type="text" name="nome" id="nome" /></td>
+    <td width="83" style="color:#FFF">Nome:</td>
+    <td width="221" style="color:#FFF"><input type="text" name="nome" id="nome" /></td>
   </tr>
   <tr>
-    <td>Gênero:</td>
-    <td><label for="genero"></label>
+    <td style="color:#FFF">Gênero:</td>
+    <td style="color:#FFF"><label for="genero"></label>
       <select name="genero" id="genero">
           <?php foreach($g as $g) { ?>
          <option value="<?=$g['id']?>"><?=$g['nome']?></option>
@@ -238,12 +239,12 @@ ul.nav a { zoom: 1; }  /* a propriedade do zoom fornece ao IE o acionador de has
       </select></td>
   </tr>
   <tr>
-    <td>Sinopse:</td>
+    <td style="color:#FFF">Sinopse:</td>
     <td><label for="sinopse"></label>
       <textarea name="sinopse" id="sinopse" cols="45" rows="5"></textarea></td>
   </tr>
   <tr>
-    <td>Classificação:</td>
+    <td style="color:#FFF">Classificação:</td>
     <td><label for="classifica"></label>
       <label for="classifica"></label>
       <select name="classifica" id="classifica">
@@ -253,7 +254,7 @@ ul.nav a { zoom: 1; }  /* a propriedade do zoom fornece ao IE o acionador de has
       </select></td>
   </tr>
   <tr>
-    <td>Emissora:</td>
+    <td style="color:#FFF">Emissora:</td>
     <td><label for="emissora"></label>
       <label for="emissora"></label>
       <select name="emissora" id="emissora">
@@ -263,7 +264,7 @@ ul.nav a { zoom: 1; }  /* a propriedade do zoom fornece ao IE o acionador de has
       </select></td>
   </tr>
   <tr>
-    <td>Tipo:</td>
+    <td style="color:#FFF">Tipo:</td>
     <td><label for="tipo"></label>
       <label for="tipo"></label>
       <select name="tipo" id="tipo">
@@ -274,7 +275,7 @@ ul.nav a { zoom: 1; }  /* a propriedade do zoom fornece ao IE o acionador de has
   </tr>
     
      <tr>
-    <td>Data da exibição:</td>
+    <td style="color:#FFF">Data da exibição:</td>
     <td><label for="programacao"></label>
       <label for="programacao"></label>
       <input type="text" name="dataExibicao" id="dataExibicao"/>
@@ -282,15 +283,81 @@ ul.nav a { zoom: 1; }  /* a propriedade do zoom fornece ao IE o acionador de has
   </tr>
     
    <tr>
-    <td>Hora Exibição:</td>
+    <td style="color:#FFF">Hora Exibição:</td>
     <td><label for="programacao"></label>
       <label for="programacao"></label>
-      <input type="text" name="horaExibicao" id="horaExibicao"/>
-    </td>
+      <select name="horaExibicao" id="horaExibicao">
+        <option value="00">00</option>
+        <option value="01">01</option>
+        <option value="02">02</option>
+        <option value="03">03</option>
+        <option value="04">04</option>
+        <option value="05">05</option>
+        <option value="06">06</option>
+        <option value="07">07</option>
+        <option value="08">08</option>
+        <option value="09">09</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+        <option value="17">17</option>
+        <option value="18">18</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+        <option value="21">21</option>
+        <option value="22">22</option>
+        <option value="23">23</option>
+      </select>
+      <label for="horasminutos"></label>
+      <select name="horasminutos" id="horasminutos">
+        <option value="10">10</option>
+        <option value="20">20</option>
+        <option value="30">30</option>
+        <option value="40">40</option>
+        <option value="50">50</option>
+        <option value="00">00</option>
+      </select></td>
   </tr>
    <tr>
-     <td>Hora de Término</td>
-     <td><input type="text" name="horaExibicao2" id="horaTermino"/></td>
+     <td style="color:#FFF">Hora de Término</td>
+     <td><select name="horaExibicao2" id="horaExibicao2">
+       <option value="00">00</option>
+       <option value="01">01</option>
+       <option value="02">02</option>
+       <option value="03">03</option>
+       <option value="04">04</option>
+       <option value="05">05</option>
+       <option value="06">06</option>
+       <option value="07">07</option>
+       <option value="08">08</option>
+       <option value="09">09</option>
+       <option value="10">10</option>
+       <option value="11">11</option>
+       <option value="12">12</option>
+       <option value="13">13</option>
+       <option value="14">14</option>
+       <option value="15">15</option>
+       <option value="16">16</option>
+       <option value="17">17</option>
+       <option value="18">18</option>
+       <option value="19">19</option>
+       <option value="20">20</option>
+       <option value="21">21</option>
+       <option value="22">22</option>
+       <option value="23">23</option>
+     </select>
+       <select name="horasminutos2" id="horasminutos2">
+         <option value="10">10</option>
+         <option value="20">20</option>
+         <option value="30">30</option>
+         <option value="40">40</option>
+         <option value="50">50</option>
+         <option value="00">00</option>
+       </select></td>
    </tr>
     
 </table>

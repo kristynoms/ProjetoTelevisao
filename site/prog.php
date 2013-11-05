@@ -17,7 +17,7 @@
 <title>Documento sem título</title>
 <style type="text/css">
 <!--
-body {
+body {wadawd
 	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
 	background-color: #4E5869;
 	margin: 0;
@@ -57,7 +57,7 @@ a:hover, a:active, a:focus { /* esse grupo de seletores dará ao navegador que e
 	width: 80%;
 	max-width: 1260px;/* uma largura máxima pode ser desejável para evitar que esse layout fique muito largo num monitor grande. Isso torna o comprimento da linha mais legível. O IE6 não concorda com essa declaração. */
 	min-width: 780px;/* uma largura mínima pode ser desejável para evitar que esse layout fique muito estreito. Isso torna o comprimento da linha mais legível nas colunas laterais. O IE6 não concorda com essa declaração. */
-	background-color: #FFF;
+	background-color: #6F7D94;
 	margin: 0 auto; /* o valor automático nos lados, combinado com a largura, centraliza o layout. Não é necessário definir a largura do contêiner para 100%. */
 }
 
@@ -79,14 +79,16 @@ a:hover, a:active, a:focus { /* esse grupo de seletores dará ao navegador que e
 */
 .sidebar1 {
 	float: left;
-	width: 20%;
-	background-color: #93A5C4;
+	width: 50%;
+
 	padding-bottom: 10px;
 }
 .content {
 	padding: 10px 0;
 	width: 80%;
 	float: left;
+	background-color:#6F7D94;
+	color:#FFF;
 }
 
 /* ~~ Este seletor agrupado oferece as listas dentro do espaço da área de conteúdo.~~ */
@@ -113,6 +115,7 @@ ul.nav a, ul.nav a:visited { /* ao agrupar estes seletores, seus links mantêm a
 ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* isso altera o fundo e a cor do texto para navegação com o mouse ou teclado. */
 	background-color: #6F7D94;
 	color: #FFF;
+	
 }
 
 /* ~~ O rodapé ~~ */
@@ -157,8 +160,7 @@ ul.nav a { zoom: 1; }  /* a propriedade do zoom fornece ao IE o acionador de has
     <ul class="nav">
       <li><a href="prog.php">Selecionar Programação</a></li>
       <li><a href="cadastroProgramacao.php">Cadastrar</a></li>
-      <li></li>
-      <li></li>
+      
     </ul>
     <!-- end .sidebar1 --></div>
   <div class="content">

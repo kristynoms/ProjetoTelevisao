@@ -9,8 +9,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>TelevisionRecords</title>
 <style type="text/css">
-
-body {
+<!--
+body {wadawd
 	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
 	background-color: #4E5869;
 	margin: 0;
@@ -50,7 +50,7 @@ a:hover, a:active, a:focus { /* esse grupo de seletores dará ao navegador que e
 	width: 80%;
 	max-width: 1260px;/* uma largura máxima pode ser desejável para evitar que esse layout fique muito largo num monitor grande. Isso torna o comprimento da linha mais legível. O IE6 não concorda com essa declaração. */
 	min-width: 780px;/* uma largura mínima pode ser desejável para evitar que esse layout fique muito estreito. Isso torna o comprimento da linha mais legível nas colunas laterais. O IE6 não concorda com essa declaração. */
-	background-color: #FFF;
+	background-color: #6F7D94;
 	margin: 0 auto; /* o valor automático nos lados, combinado com a largura, centraliza o layout. Não é necessário definir a largura do contêiner para 100%. */
 }
 
@@ -80,6 +80,7 @@ a:hover, a:active, a:focus { /* esse grupo de seletores dará ao navegador que e
 	padding: 10px 0;
 	width: 80%;
 	float: left;
+	background-color:#6F7D94;
 }
 
 /* ~~ Este seletor agrupado oferece as listas dentro do espaço da área de conteúdo.~~ */
@@ -131,7 +132,7 @@ ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* isso altera o fundo e a cor
 	font-size: 1px;
 	line-height: 0px;
 }
-
+-->
 </style><!--[if lte IE 7]>
 <style>
 .content { margin-right: -1px; } /* essa margem negativa de 1px pode ser colocada em qualquer uma das colunas nesse layout com o mesmo efeito corretivo. */
@@ -153,11 +154,7 @@ ul.nav a { zoom: 1; }  /* a propriedade do zoom fornece ao IE o acionador de has
       <li></li>
       <li></li>
     </ul>
-    <p> Menu</p>
-    <p>sem </p>
-    <p>utilidade</p>
-    <p>por </p>
-    <p>enquanto</p>
+    <p>&nbsp;</p>
     <!-- end .sidebar1 --></div>
   <div class="content"><h4>&nbsp;</h4>
     <h1>&nbsp;</h1>
