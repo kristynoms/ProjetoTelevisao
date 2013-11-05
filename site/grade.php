@@ -151,6 +151,18 @@ ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* isso altera o fundo e a cor
 	font-size: 1px;
 	line-height: 0px;
 }
+
+/*css global tabela*/
+        .full_table_list{width: 200px;border-collapse: collapse; color:#000}
+         
+        /*colocando bordas nas linhas*/
+        .full_table_list tr{border:1px black solid;}
+         
+        /*Definido cor das linhas pares*/
+        .full_table_list tr:nth-child(even) {background: #06C}
+         
+        /*Definindo cor das Linhas impáres*/
+        .full_table_list tr:nth-child(odd) {background: #CCC}       
 -->
 </style><!--[if lte IE 7]>
 <style>
