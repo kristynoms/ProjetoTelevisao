@@ -204,7 +204,7 @@ ul.nav a { zoom: 1; }  /* a propriedade do zoom fornece ao IE o acionador de has
                     <td><?=$r['classificacao']?></td>
                     <td><?=$r['genero']?></td>
                     <td><?=$r['emissora']?></td>
-                    <td><textarea name="a" cols="20" rows="3"><?=$r['sinopse']?></textarea></td>
+                    <td><textarea name="a" cols="20" rows="3" readonly="readonly"><?=$r['sinopse']?></textarea></td>
                      <td><?=$r['tipo']?></td>
                     <td><?=$data?></td>
                     <td><?=$r['horaExibicao']?></td>
