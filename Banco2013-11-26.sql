@@ -2,7 +2,8 @@
 SQLyog Ultimate v11.11 (64 bit)
 MySQL - 5.5.32 : Database - projetotr
 *********************************************************************
-*/
+*/
+
 
 /*!40101 SET NAMES utf8 */;
 
@@ -56,7 +57,7 @@ CREATE TABLE `genero` (
 
 /*Data for the table `genero` */
 
-insert  into `genero`(`id`,`nome`) values (1,'Suspense'),(2,'Drama'),(3,'Comédia');
+insert  into `genero`(`id`,`nome`) values (1,'Suspense'),(2,'Drama'),(3,'Comï¿½dia');
 
 /*Table structure for table `grade` */
 
@@ -105,7 +106,7 @@ CREATE TABLE `tipo` (
 
 /*Data for the table `tipo` */
 
-insert  into `tipo`(`id`,`nome`) values (1,'Novela'),(2,'Série'),(3,'Informativo'),(4,'Filme');
+insert  into `tipo`(`id`,`nome`) values (1,'Novela'),(2,'Sï¿½rie'),(3,'Informativo'),(4,'Filme');
 
 /*Table structure for table `usuario` */
 
